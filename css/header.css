@@ -1,0 +1,221 @@
+@charset "utf-8";
+.tb,
+.mb {
+  display: none;
+}
+@media screen and (max-width: 1600px) {
+  .tb {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+  .mb {
+    display: block;
+  }
+}
+.sprite::after {
+  content: "";
+  background: url(../images/sp_common.png) no-repeat;
+  background-size: 262px 219px;
+}
+.sp_draw::after {
+  content: "";
+  background: url(../images/sp_card_view.png) no-repeat;
+  background-size: 842px 629px;
+}
+.flex {
+  display: flex;
+}
+body {
+  overflow-x: hidden;
+  font-family: "NanumSquareNeo";
+  color: #111;
+  font-size: 16px;
+}
+header {
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.wrap {
+  width: 1280px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  .wrap {
+    width: 100%;
+    margin: 0;
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrap {
+    width: 100%;
+    padding: 15px 20px 13px;
+  }
+}
+.logo::after {
+  content: "";
+  display: block;
+  width: 145px;
+  height: 28px;
+  background-position: 0 0;
+  margin-right: 44px;
+}
+.gnb {
+  height: 58px;
+  padding: 13px 0;
+}
+@media screen and (max-width: 1600px) {
+  .gnb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 768px;
+  }
+}
+.gnb ul {
+  justify-content: center;
+  gap: 10px;
+}
+.gnb ul li a {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0 16px;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+.gnb ul li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.gnb ul li.on a {
+  background: #000;
+  color: #fff;
+}
+.util {
+  gap: 20px;
+}
+.util > p:first-of-type a {
+  display: block;
+  width: 143px;
+  height: 32px;
+  border-radius: 16px;
+  background: #0cc28f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+.util > p:first-of-type a::after {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-position: -238px -112px;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+.util > p:first-of-type a:hover {
+  background: #00a58b;
+}
+.util > p:nth-of-type(2) a::after {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-position: -134px -189px;
+}
+@media screen and (max-width: 767px) {
+  .util {
+    gap: 20px;
+  }
+  .util div button::after {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-position: -68px -189px;
+    cursor: pointer;
+  }
+  .pop_menu {
+    position: absolute;
+    right: -767px;
+    top: 0;
+    width: 0%;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .mb_menu.menu_open .pop_menu,
+  .mb_menu:hover .pop_menu {
+    width: 100%;
+    right: 0;
+  }
+  .pop_menu {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+  .pop_head {
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px 13px;
+  }
+  .pop_head p {
+    height: 28px;
+  }
+  .pop_util {
+    gap: 20px;
+  }
+  .pop_util p a::after {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-position: -134px -189px;
+  }
+  .mb_gnb {
+    padding: 41px 20px;
+    font-weight: 800;
+  }
+  .mb_gnb nav ul li a {
+    font-family: "NanumSquareNeoExtraBold";
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 60px;
+  }
+  .download {
+    margin-top: 30px;
+  }
+  .download a {
+    display: inline-block;
+    height: 42px;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 42px;
+    letter-spacing: -0.4px;
+    border-radius: 21px;
+    background: #0cc28f;
+    color: #fff;
+  }
+  .download a:hover {
+    background: #00a58b;
+  }
+  .download a::after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-position: -238px -112px;
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+}

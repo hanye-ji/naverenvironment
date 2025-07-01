@@ -1,0 +1,81 @@
+.head_slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 900px;
+}
+.head_slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 15s infinite linear;
+}
+.recycle {
+  background-image: url(../images/img_spot_recycle.png);
+  animation-delay: 0;
+}
+.save {
+  background: url(../images/img_spot_earth.png) no-repeat 50% 50%;
+  background-color: #98eecd;
+  background-size: 1600px 900px;
+  animation-delay: -5s;
+}
+.certifi {
+  background-color: #efeced;
+  animation-delay: -10s;
+}
+.certifi video {
+  width: 100%;
+  height: 100%;
+}
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+
+  26% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  93% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 1600px) {
+  .head_slider {
+    display: none;
+  }
+  .tb_slider {
+    position: relative;
+    width: 100%;
+    height: 1366px;
+    overflow: hidden;
+  }
+  .tb_slider video {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tb_slider {
+    height: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tb_slider {
+    height: 752px;
+  }
+}
